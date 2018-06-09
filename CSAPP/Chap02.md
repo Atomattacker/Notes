@@ -9,13 +9,13 @@
 
 ### 数据大小
 C语言支持整数和浮点数的多种数据格式。  
-![](Images/2-3.png)  
+![](Images/Chap2/2-3.png)  
 C语言对不同数据类型的数字范围设置了下界，却没有设置上界。
 
 ### 寻址和字节顺序
 w位的整数[x<sub>w-1</sub>, x<sub>w-2</sub>, ..., x<sub>1</sub>, x<sub>0</sub>]其中x<sub>w-1</sub>是最高有效位，若w是8的倍数，最高有效字节是[x<sub>w-1</sub>, x<sub>w-2</sub>, ..., x<sub>w-7</sub>, x<sub>w-8</sub>]，最低有效字节[x<sub>7</sub>, x<sub>6</sub>, ..., x<sub>1</sub>, x<sub>0</sub>]。  
 按照最低有效字节到最高有效字节顺序存储，称为**小端法**。按照最高有效字节到最低有效字节顺序存储，称为**大端法**。  
-![](Images/2-4.png)
+![](Images/Chap2/2-4.png)
 大多数Intel兼容机采用小端法，大多数IBM和SUN机器采用大端法，很多新处理器采用双端法，可配置成大端或小端。
 
 ### 表示字符串
@@ -34,27 +34,27 @@ C语言没有明确定义应该使用哪种类型的右移。对于无符号数�
 
 ### 整型数据类型
 C语言支持多种整型类型，C语言定义每种类型最小的取值范围。   
-![](Images/2-10.png)   
+![](Images/Chap2/2-10.png)   
 
 ### 无符号的编码 
 一个整数有w位，写作：  
-![](Images/2-2-1.png)   
+![](Images/Chap2/2-2-1.png)   
 函数B2U<sup>w</sup>将一个长度为w的0、1串映射到非负整数。
-![](Images/2-2-2.png)  
+![](Images/Chap2/2-2-2.png)  
 
 ### 补码编码
 最常见的有符号数的计算机表示方式就是补码(two's complement)形式。  
-![](Images/2-2-3.png)   
+![](Images/Chap2/2-2-3.png)   
 最高有效位是符号位，权重是-2<sup>w-1</sup>  
-![](Images/2-2-4.png) 
+![](Images/Chap2/2-2-4.png) 
 
 #### 有符号数的其他表示方法
 有符号数还有两种标准的表示方法：  
 **反码(Ones' Complement)**：除了最高有效位的权是-(2<sup>w-1</sup> - 1),它和补码是一样的：  
-![](Images/2-2-5.png) 
+![](Images/Chap2/2-2-5.png) 
 
 **原码(Sign-Magnitude)**：最高有效位是符号位，用来确定剩下的位应该取负权还是正权：
-![](Images/2-2-6.png) 
+![](Images/Chap2/2-2-6.png) 
 
 ### 有符号数和无符号数之间的转换  
 大多数C语言的实现是从位级角度来看类型转换的。  
@@ -78,17 +78,17 @@ v= -12345, uv = 53191
 
 ### 无符号加法
 两个无符号数x,y的加法运算：  
-![](Images/2-2-11.png)   
+![](Images/Chap2/2-2-11.png)   
 
 ### 补码加法  
 两个数x,y的补码加法运算：  
-![](Images/2-2-14.png)   
+![](Images/Chap2/2-2-14.png)   
 
 ### 无符号乘法  
-![](Images/2-2-16.png) 
+![](Images/Chap2/2-2-16.png) 
 
 ### 补码乘法
-![](Images/2-2-17.png)  
+![](Images/Chap2/2-2-17.png)  
 
 
 ## 浮点数
@@ -97,7 +97,7 @@ IEEE 754标准制订表示浮点数及其运算的标准。
 
 ### 二进制小数
 二进制表示法b<sub>m</sub>b<sub>m-1</sub>...b<sub>1</sub>b<sub>0</sub>.b<sub>-1</sub>b<sub>-2</sub>...b<sub>-n</sub>。b<sub>i</sub>的取值范围是0和1。这种表示法表示的数b定义是：  
-![](Images/2-2-19.png)    
+![](Images/Chap2/2-2-19.png)    
 
 ### IEEE浮点表示
 IEEE浮点标准使用V=(-1)<sup>s</sup> x M x 2<sup>E</sup>表示一个数:
@@ -106,8 +106,8 @@ IEEE浮点标准使用V=(-1)<sup>s</sup> x M x 2<sup>E</sup>表示一个数:
 - **阶码(exponent)** E的作用是对浮点数加权。权重是2的E次幂。 
 
 一个单独的符号位s直接编码符号s，k位的阶码字段exp=e<sup>k-1</sup>...e<sup>1</sup>e<sup>0</sup>编码阶码E。n位小数frac编码尾数M。  
-![](Images/2-31.png)    
+![](Images/Chap2/2-31.png)    
 根据exp的值，被编码的值可以分成3种不同的情况。  
-![](Images/2-32.png)  
+![](Images/Chap2/2-32.png)  
 
 
