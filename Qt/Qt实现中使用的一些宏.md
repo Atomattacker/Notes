@@ -32,3 +32,57 @@ static inline typename Wrapper::pointer qGetPtrHelper(const Wrapper &p) { return
 ```
 
 ## Qt元数据及信号和槽使用的宏
+**Q_OBJECT**宏是使用Qt信号和槽机制以及Qt对象服务必须声明的宏。Qt文档给出该宏必须声明在类定义的private区域，并且要使用该宏必须是QObject的直接子类或间接子类。Q_OBJECT宏的定义如下：
+```C++
+
+#define Q_OBJECT_CHECK \
+    template <typename T> inline void qt_check_for_QOBJECT_macro(const T &_q_argument) const \
+    { int i = qYouForgotTheQ_OBJECT_Macro(this, &_q_argument); i = i; }
+
+#ifdef Q_NO_DATA_RELOCATION
+#define Q_OBJECT_GETSTATICMETAOBJECT static const QMetaObject &getStaticMetaObject();
+#else
+#define Q_OBJECT_GETSTATICMETAOBJECT
+#endif
+
+
+#ifndef QT_NO_TRANSLATION
+# ifndef QT_NO_TEXTCODEC
+// full set of tr functions
+// ### Qt 5: merge overloads
+#  define QT_TR_FUNCTIONS \
+    static inline QString tr(const char *s, const char *c = 0) \
+        { return staticMetaObject.tr(s, c); } \
+    static inline QString trUtf8(const char *s, const char *c = 0) \
+        { return staticMetaObject.trUtf8(s, c); } \
+    static inline QString tr(const char *s, const char *c, int n) \
+        { return staticMetaObject.tr(s, c, n); } \
+    static inline QString trUtf8(const char *s, const char *c, int n) \
+        { return staticMetaObject.trUtf8(s, c, n); }
+# else
+// no QTextCodec, no utf8
+// ### Qt 5: merge overloads
+#  define QT_TR_FUNCTIONS \
+    static inline QString tr(const char *s, const char *c = 0) \
+        { return staticMetaObject.tr(s, c); } \
+    static inline QString tr(const char *s, const char *c, int n) \
+        { return staticMetaObject.tr(s, c, n); }
+# endif
+#else
+// inherit the ones from QObject
+# define QT_TR_FUNCTIONS
+#endif
+
+//Q_OBJECT宏
+#define Q_OBJECT \
+public: \
+    Q_OBJECT_CHECK \
+    static const QMetaObject staticMetaObject; \
+    Q_OBJECT_GETSTATICMETAOBJECT \
+    virtual const QMetaObject *metaObject() const; \
+    virtual void *qt_metacast(const char *); \
+    QT_TR_FUNCTIONS \
+    virtual int qt_metacall(QMetaObject::Call, int, void **); \
+```
+总的来说，Q_OBJECT宏声明了一些函数，其中包含Q_OBJECT的头文件由moc处理之后会生成相应的moc_*.cpp文件，该文件中是对Q_OBJECT宏声明的函数的实现。同时该文件中也对声明的信号函数进行了实现。
+
