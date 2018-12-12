@@ -9,14 +9,14 @@
 
 ## OS预定义宏
 
-### Android
+### Android  
 |类型|宏|格式|描述|
 |-|-|-|-|
 |标识|`__ANDROID__`|||
 |版本|`__ANDROID_API__`|V|V = API Version, Must be included from <android/api-level.h>|
 
-例子
-|Android版本|`__ANDROID_API__`|
+例子  
+|Android版本|`__ANDROID_API__`|  
 |-|-|
 |1.0|1|
 |1.1|2|
@@ -30,7 +30,7 @@
 |2.3.3|10|
 |3.0|11|
 
-### BDS环境
+### BDS环境  
 |类型|宏|格式|描述|
 |-|-|-|-|
 |标识|`__FreeBSD__`  `__NetBSD__`  `__OpenBSD__` `__bsdi__` `__bsdi__`|||
@@ -52,7 +52,7 @@
 |版本|`__FreeBSD__`|V|V=Version|
 |版本|`__FreeBSD_version`|?|必须包含<osreldate.h>|
 
-例子
+例子  
 |FreeBSD|`__FreeBSD__`|`__FreeBSD_version`|
 |1.x|1||
 |2.0-RELEASE|2|119411|
@@ -118,7 +118,7 @@
 |标识|`WIN32_PLATFORM_'P'`||P = Platform|
 |版本|`WIN32_PLATFORM_'P'`|V|P = Platform, V = Version|
 
-例子
+例子  
 |版本|`_WIN32_WCE`|
 |-|-|
 |2.01|201|
@@ -139,7 +139,7 @@
 |标识|`__CODEGEARC__`||
 |版本|`__CODEGEARC__`|From C++ Builder 2006|
 
-例子
+例子  
 |Borland C++|C++ Builder|`__BORLANDC__`|`__CODEGEARC__`|
 |-|-|-|-|
 |2.0||0x200||
@@ -180,7 +180,7 @@
 
 Notice that the meaning of the __GNUC__ macro has changed subtly over the years, from identifying the GNU C/C++ compiler to identifying any compiler that implements the GNU compiler extensions (see the [Feature request - a macro defined for GCC](https://gcc.gnu.org/ml/gcc/2008-07/threads.html#00025) discussion for further information). For example, the Intel C++ on Linux also defines these macros from version 8.1 (see the [Intel C++ Compiler 8.1 for Linux Release Notes](ftp://download.intel.com/support/performancetools/c/linux/sb/clin81_relnotes.pdf) and Intel Compilers for [Linux: Compatibility with GNU Compilers](https://software.intel.com/en-us/articles/intel-compilers-for-linux-compatibility-with-gnu-compilers).)
 
-例子
+例子  
 |GNU C/C++|`__GNUC__`|`__GNUC_MINOR__`|`__GNUC_PATCHLEVEL__`|
 |-|-|-|-|
 |2.7.x|2|7|N/A|
@@ -204,7 +204,7 @@ The format of this new macro is:
 |-|-|-|-|
 |Version|`__GNUC_VERSION__`|VVRRPP|VV = Version,RR = Revision,PP = Patch|
 
-例子
+例子  
 |GNU C/C++|`__GNUC_VERSION__`|  
 |-|-|
 |2.7.x|20700|  
@@ -219,7 +219,7 @@ The format of this new macro is:
 |Version|`_MSC_FULL_VER`|VVRRPPPPP|VV = Version,RR = Revision,PPPPP = Patch,From Visual C++ 8.0|
 |Version|`_MSC_BUILD`|B|B = Build number,From Visual C++ 9.0|
 
-例子
+例子  
 |Visual C++ [~](https://docs.microsoft.com/en-us/previous-versions/b0084kay(v=vs.140))  [~](https://social.msdn.microsoft.com/Forums/vstudio/en-US/c3f1ba1f-c59d-46a3-a028-bcfabe9fbe2c/how-do-you-check-which-compiler-you-are-using-in-c?forum=vcgeneral)|`_MSC_VER`|`_MSC_FULL_VER`|
 |-|-|-|
 |1.0|800||
@@ -258,7 +258,7 @@ Notice that `__MINGW32_MAJOR_VERSION`, `__MINGW32_MINOR_VERSION`, `__MINGW64_VER
 are only defined if appropriate headers are included. Appropriate headers are
 <stdlib.h>, <stdio.h>, <windows.h>, <windef.h>, and probably more.
 
-例子
+例子   
 |`__MINGW32_MAJOR_VERSION`|`__MINGW32_MINOR_VERSION`|`__MINGW64_VERSION_MAJOR`|`__MINGW64_VERSION_MINOR`|Description|
 |-|-|-|-|-|
 |2|4 |||MinGW32 2.4|
