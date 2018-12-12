@@ -54,6 +54,7 @@
 
 例子  
 |FreeBSD|`__FreeBSD__`|`__FreeBSD_version`|
+|-|-|-|
 |1.x|1||
 |2.0-RELEASE|2|119411|
 |2.2-RELEASE|2|220000|
