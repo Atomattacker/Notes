@@ -119,7 +119,8 @@
 |版本|`WIN32_PLATFORM_'P'`|V|P = Platform, V = Version|
 
 例子
-|版本|_WIN32_WCE|
+|版本|`_WIN32_WCE`|
+|-|-|
 |2.01|201|
 |2.11|211|
 |3.0|300|
@@ -181,6 +182,7 @@ Notice that the meaning of the __GNUC__ macro has changed subtly over the years,
 
 例子
 |GNU C/C++|`__GNUC__`|`__GNUC_MINOR__`|`__GNUC_PATCHLEVEL__`|
+|-|-|-|-|
 |2.7.x|2|7|N/A|
 |3.0.2|3|0|2|
 
