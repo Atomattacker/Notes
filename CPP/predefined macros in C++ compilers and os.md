@@ -206,6 +206,7 @@ If you prefer a single version macro, you can define the following yourself.
 #endif
 ```
 The format of this new macro is:
+
 |类型|宏|格式|描述|
 |-|-|-|-|
 |Version|`__GNUC_VERSION__`|VVRRPP|VV = Version,RR = Revision,PP = Patch|
@@ -254,6 +255,7 @@ The format of this new macro is:
 
 ### MinGW and MinGW-w64
 MinGW (formerly known as MinGW32) is a toolchain for creating 32 Bit Windows executables. The MinGW-w64 projects offers toolchains for creating 32 Bit and 64 Bit Windows executables. The following table shows which macros are defined by each toolchain:  
+
 |Type|Macro|Description|MinGW32|MinGW-w64 32 Bit|MinGW-w64 64 Bit|
 |-|-|-|-|-|-|
 |Identification|`__MINGW32__`|defined|defined|defined|
