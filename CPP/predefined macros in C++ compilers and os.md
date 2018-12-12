@@ -71,6 +71,7 @@
 
 ### Linux kernel
 基于Linux内核的系统定义了下面这些宏：
+
 |类型|宏|描述|
 |-|-|-|
 |标识|`__linux__`|[~](http://www.faqs.org/docs/Linux-HOWTO/GCC-HOWTO.html#INDEX.25)|
@@ -264,6 +265,7 @@ MinGW (formerly known as MinGW32) is a toolchain for creating 32 Bit Windows exe
 |Identification|`__MINGW64__`|-|-|defined|
 |Version|`__MINGW64_VERSION_MAJOR`|Version|-|defined|defined|
 |Version|`__MINGW64_VERSION_MINOR`|Revision|-|defined|defined|
+
 Notice that `__MINGW32_MAJOR_VERSION`, `__MINGW32_MINOR_VERSION`, `__MINGW64_VERSION_MAJOR`, and `__MINGW64_VERSION_MINOR`
 are only defined if appropriate headers are included. Appropriate headers are
 <stdlib.h>, <stdio.h>, <windows.h>, <windef.h>, and probably more.
