@@ -1,0 +1,2 @@
+# Linux系统启动过程
+Linux启动过程牵涉到多个阶段和软件组件，包括固件初始化，bootloader的执行，Linux内核镜像的加载和启动，各种守护进程和启动脚本的执行等等。这些不同的阶段和组件有不同的变式和方法。比如[GRUB](https://en.wikipedia.org/wiki/GNU_GRUB)，[LILO](https://en.wikipedia.org/wiki/LILO_(boot_loader))，[SYSLINUX](https://en.wikipedia.org/wiki/SYSLINUX)或[Loadin](https://en.wikipedia.org/wiki/Loadlin)都可以用作bootloader；启动脚本可以是传统的init-style的，也可以由[systemd](https://en.wikipedia.org/wiki/Systemd)或[Upstart](https://en.wikipedia.org/wiki/Upstart_(software))执行的系统配置。
