@@ -33,6 +33,7 @@ DVD playback：方法[ IDvdControl2::SetOption](https://docs.microsoft.com/en-us
 DirectShow是一个开发架构，也就意味着它支持任何有过滤器(filters)解析和解码的格式。微软提供的过滤器支持下面的文件和压缩格式。
 
 文件类型:  
+
 |文件类型|更多信息|
 |-------|--------|
 |ASF(Advanced Systems Format),包括WMA(Windows Media Audio),WMV(Windows Media Video)|[WM ASF Reader Filter](https://docs.microsoft.com/zh-cn/windows/desktop/DirectShow/about-the-wm-asf-reader-filter), [WM ASF Writer Filter](https://docs.microsoft.com/zh-cn/windows/desktop/DirectShow/wm-asf-writer-filter)|
@@ -44,6 +45,7 @@ DirectShow是一个开发架构，也就意味着它支持任何有过滤器(fil
 |WAV|[WAVE Parser Filter](https://docs.microsoft.com/zh-cn/windows/desktop/DirectShow/wave-parser-filter)|
 
 压缩格式:  
+
 |格式|更多信息|
 |-----|------|
 |AAC|[Microsoft MPEG-1/DD/AAC Audio Decoder](https://docs.microsoft.com/zh-cn/windows/desktop/DirectShow/microsoft-mpeg-1-dd-audio-decoder)|
