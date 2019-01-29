@@ -64,6 +64,7 @@ DirectShow是一个开发架构，也就意味着它支持任何有过滤器(fil
 ## 构建DirectShow应用程序
 **头文件**  
 所有的DirectShow应用程序使用下面的头文件
+
 |头文件|使用|
 |------|--|
 |Dshow.h|所有的DirectShow应用程序|
@@ -72,6 +73,7 @@ DirectShow是一个开发架构，也就意味着它支持任何有过滤器(fil
 
 **库文件**  
 DirectShow使用下表列出的静态库文件
+
 |库文件|描述|
 |------|----|
 |Strmiids.lib|导出类标识符(CLSID)和接口标识符(IID)|
